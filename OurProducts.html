@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, intial-scale=1.0">
+	<meta charset="utf-8">
+	<link rel = "stylesheet" type = "text/css" href = "css/External.css" >
+	<link rel="stylesheet" type="text/css" href="css/productStyle.css" media="screen"/>
+	<title>Our Products</title>
+	<style>
+		#forminfo{display:none; 
+		position:absolute; 
+		overflow:hidden; 
+		color:white;
+		margin:6% 20% 10% 25%; 
+		float:center; 
+		font-size:1.2em;
+		border:1px solid black; 
+		border-radius:8px; 
+		padding: 0 1.5% 4% 4%; 
+		min-width:600px;
+		background-image:url("images/back.jpg");
+		background-position:center;}
+	</style>
+</head>
+<body>	
+	<header id="header" >
+			<div class="logo-nav">
+				<nav id="sticky-nav">
+					<a href="HomePage.html"><img src="images/logo.png" alt="Rainforest logo" class="logo"></a>
+					<ul class="main-nav">
+						<li><a href="HomePage.html">Home</a></li>
+						<li><a href="OurProducts.html">Our Products</a></li>
+						<li><a href="Quiz.html">Quiz</a></li>
+						<li><a href="Gallery.html">Gallery</a></li>
+						<li><a href="AboutUs.html">About Us</a></li>
+						<li><a href="CommentPage.html">Give Comments</a></li>
+						<li><a href="Sitemap.html">Site Map</a></li>
+					</ul>
+				</nav>
+			</div>
+	</header>
+	<div id="fontC">
+		<div class="pageN">
+			<button class="pgnav" type="button" name="pageup" onclick="pageUp()">Page Up</button>
+			<button class="pgnav" type="button" name="pagedown" onclick="pageDown()">Page Down</button>
+		</div>
+		<div id="fontchange">
+			<button class="fontS" type="button" name="zoomout" onclick="decreaseSize('main')">-</button>
+			<button class="fontS" type="button" name="zoomin" onclick="increaseSize('main')">+</button>
+		</div>
+	</div>
+	<div id="main">
+		<div id="mesDisplay">
+		</div>
+		<div id="forminfo" method="post">
+			<div id="close">
+				<button type="button" name="close" class="closeItem closeF" onclick="closeForm();">&times;</button>
+			</div>
+			<div id="inner">
+				<p>
+					Please enter your details
+				</p>
+				<br/><br/>
+				<form method="post" id="form1" name="customer" style="background-image:url(images/back.jpg)">
+					Personal Details:<br/><br/>
+					<label for="fName" class="element">First Name* </label><br/>
+						<input type="text" id="fName" name="Fname" class="element"/><br/><br/>
+					<label for="lName" id="last" class="element">Last Name* </label><br/>
+						<input type="text" id="lName" name="Lname" class="element"/><br/><br/>
+					Contact Information:<br/><br/>
+					<label for="Email" class="element">E-mail </label><br/>
+						<input type="email" id="Email" name="email" class="element"/><br/><br/>
+					<label for="contact" id="contactN" class="element">Contact no.*</label><br/>
+						<input type="text" id="contact" name="contactNum" class="element"/><br/><br/>
+					Billing Address:<br/><br/>
+					<label for="add1" id="del" class="element">Address 1* </label><br/>
+						<input type="text" id="add1" name="address1" class="element"/><br/><br/>
+					<label for="add2" id="del" class="element">Address 2* </label><br/>
+						<input type="text" id="add2" name="address2" class="element"/><br/><br/>
+					<label for="city" id="del" class="element">City* </label><br/>
+						<input type="text" id="city" name="city" class="element"/><br/><br/>
+					<label for="zip" id="del" class="element">Post code/Zip </label><br/>
+						<input type="text" id="zip" name="postCode" class="element"/><br/><br/>
+					<label for="area" id="del" class="element">Province/State </label><br/>
+						<input type="text" id="area" name="province" class="element"/><br/><br/>
+					<label for="cntry" id="del" class="element">Country* </label><br/>
+						<input type="text" id="cntry" name="country" class="element"/><br/><br/>
+						<br/><br/>
+					<button type="reset" class="formbtn"  >Clear</button>
+					<button type="button" class="formbtn" onclick="validation()">Checkout</button>
+					<br/>
+				</form>
+			</div>
+		</div>
+		<div id="orderinfo">
+			<div id="close" class="BillClose">
+				<button type="close" class="closeItem" onclick="closeOrder()">&times;</button>
+			</div>
+			<div id="billinfo">
+				<span class="top">Your Order :</span>
+        		<div>
+            		<div  id="itemN" class="items" >
+            			<ul id="itemName">
+            			</ul>
+            		</div>
+		            <div  id="itemQ" class="items">
+		            	<ul id="itemQuan">
+		            	</ul>
+		            </div>
+		            <div id="itemP" class="items">
+		            	<ul id="itemPrice">
+		            	</ul>
+		            </div>
+        		</div>
+        		<div class="itemSum" >
+		          	<div id="title">
+		          		Total order 
+		          	</div>
+		          	<div id="sum">
+		          		Rs.
+		          	</div>
+        		</div>
+   			</div>
+		</div>
+		<div id="wrap"  >
+			<div class="msg">
+				<p id="content1">
+				<br/><br/>
+						Tropical rainforests play a major role in reducing the effects of worldwide climatic change. It is our responsibility to protect our mother nature which is essential for everyone's survival. Help us to spread our message and contribute to our service. Our products are made of eco-friendly, recycled materials so you don't have to worry about adding any burden to mother nature.
+				</p>
+				<br/><br/><br/>
+			</div>
+			<div class="product">
+				<div id="product1">
+					<img src="images/GWsticker.png" alt="green world sticker">
+					<div id="descript">
+						<div id="name1">
+							Green World sticker
+						</div>
+						<div>
+							<div id="currency">
+								Rs.
+							</div>
+							<div id="price1" class="price">
+								150
+							</div>
+						</div>
+						<br/>
+						<div>
+							<input type="number" id="value1" value="0" min="0" max="10" class="number" />
+							<button type="button" name="purchase" id="btn" onclick="addOrder('name1','price1','value1');">
+								Add to cart
+							</button>
+						</div>
+					</div>
+					<br/>
+				</div>
+			</div>
+			<div class="product">
+				<div id="product2">
+					<img src="images/WPsticker.png" alt="we protect environment sticker">
+					<div id="descript">
+						<div id="name2">
+							We Protect sticker
+						</div>
+						<div>
+							<div id="currency">
+								Rs.
+							</div>
+							<div id="price2" class="price">
+								150.00
+							</div>
+						</div>
+						<br/>
+						<div>
+							<input type="number" id="value2" value="0" min="0" max="10"class="number"/>
+							<button type="button" name="purchase" id="btn" onclick="addOrder('name2','price2','value2');">
+								Add to cart
+							</button>
+						</div>
+					</div>
+					<br/>
+				</div>
+			</div>
+			<div class="product">
+				<div id="product3">
+					<img src="images/sticker4.png" alt="4 stickers">
+					<div id="descript">
+						<div id="name3">
+							sticker 4 pack
+						</div>
+						<div>
+							<div id="currency">
+								Rs.
+							</div>
+							<div id="price3" class="price">
+								400.00
+							</div>
+						</div>
+						<br/>
+						<div>
+							<input type="number" id="value3" value="0" min="0" max="10" class="number"/>
+							<button type="button" name="purchase" id="btn" onclick="addOrder('name3','price3','value3');">
+								Add to cart
+							</button>
+						</div>
+					</div>
+					<br/>
+				</div>
+			</div>
+			<div class="product">
+				<div id="product4">
+					<img  src="images/GWbag.png" alt="tote bag" id="rec">
+					<button class="swipe frnt" name="front" onclick="displayFront('rec')">Front</button>
+					<button class="swipe" name="back" onclick="displayBack('rec')">Back</button>
+					<div id="descript">
+						<br/>
+						<div id="name4">
+							Green World Eco-friendly Tote bag
+						</div>
+						<div>
+							<div id="currency">
+								Rs.
+							</div>
+							<div id="price4" class="price">
+								650.00
+							</div>
+						</div>
+						<br/>
+						<div>
+							<input type="number" id="value4" value="0" min="0" max="10" class="number"/>
+							<button type="button" name="purchase" id="btn" onclick="addOrder('name4','price4', 'value4');">
+								Add to cart
+							</button>
+						</div>
+					</div>
+					<br/>
+				</div>
+			</div>
+			<div class="product">
+				<div id="product5">
+					<img  src="images/recycle.png" alt="recycle tote bag" id="Tbag">
+					<button class="swipe frnt" name="front" onclick="displayFront('Tbag')">Front</button>
+					<button class="swipe" name="back" onclick="displayBack('Tbag')">Back</button>
+					<div id="descript">
+						<br/>
+						<div id="name5">
+							Recycle Eco-friendly Tote bag
+						</div>
+						<div>
+							<div id="currency">
+								Rs.
+							</div>
+							<div id="price5" class="price">
+								650.00
+							</div>
+						</div>
+						<br/>
+						<div>
+							<input type="number" id="value5" value="0" min="0" max="10" class="number"/>
+							<button type="button" name="purchase" id="btn" onclick="addOrder('name5','price5','value5');">
+								Add to cart
+							</button>
+						</div>
+					</div>
+					<br/>
+				</div>
+			</div>
+			<div class="product">
+				<div id="product6">
+					<img id="mensT" src="images/Mwhite1.png" alt="mens t-shirt"/>
+					<button class="swipe frnt" name="front" onclick="changecolM()">Front</button>
+					<button class="swipe" name="back" onclick="displayBackM()">Back</button>
+					<div id="descript">
+						<br/>
+						<div id="name6">
+							Green World Men's T-Shirt 
+						</div>
+						<div>
+							<div id="currency">
+								Rs.
+							</div>
+							<div id="price6" class="price">
+								1000.00
+							</div>
+						</div>
+						<br/>
+						<div class="options colors">
+							<select name="mens" class="colorM selectcol" id="menscol" onchange="changecolM()">
+								<option value="color">Color</option>
+								<option value="white">White</option>
+								<option value="black">Black</option>
+								<option value="green">Green</option>
+								<option value="blue">Blue</option>
+								<option value="maroon">Maroon</option>
+								<option value="charcoal" >Charcoal</option>
+								<option value="navy">Navy</option>
+								<option value="sport_grey">Sport Grey</option>
+							</select>
+							<select name="sizeM" class="mensS sizes" id="menss" >
+								<option value="size" selected>Size</option>
+								<option value="small">Small</option>
+								<option value="medium">Medium</option>
+								<option value="large">Large</option>
+								<option value="Extra-Large">X-Large</option>
+							</select>
+						</div>
+						<br/>
+						<div>
+							<input type="number" id="value6" value="0" min="0" max="10" class="number"/>
+							<button type="button" name="purchase" id="btn" onclick="addItem('name6','price6','value6','menscol','menss')">
+							Add to cart
+							</button>
+						</div>
+					</div> 
+					<br/>
+				</div>
+			</div>
+			<div class="product">
+				<div id="product7">
+					<img src="images/Wwhite1.png" id="womensT" alt="womens t-shirt">
+					<button class="swipe frnt" name="front" onclick="changecolW()">Front</button>
+					<button class="swipe" name="back" onclick="displayBackW()">Back</button>
+					<div id="descript">
+						<br/>
+						<div id="name7">
+							Green World Women's T-Shirt
+						</div>
+						<div>
+							<div id="currency">
+								Rs.
+							</div>
+							<div id="price7" class="price">
+								1000.00
+							</div>
+						</div>
+						<br/>
+						<div class="options colors">
+							<select name="womens" class="colorW selectcol" id="womenscol" onchange="changecolW()">
+								<option value="color" selected>Color</option>
+								<option value="white" >White</option>
+								<option value="black">Black</option>
+								<option value="green">Green</option>
+								<option value="blue">Blue</option>
+								<option value="maroon">Maroon</option>
+								<option value="charcoal">Charcoal</option>
+								<option value="navy">Navy</option>
+								<option value="sport_grey">Sport Grey</option>
+							</select>
+							<select name="sizeW" class="womenS sizes" id="womenss">
+								<option value="size" selected>size</option>
+								<option value="Extra-small">X-Small</option>
+								<option value="small">Small</option>
+								<option value="medium">Medium</option>
+								<option value="large">Large</option>
+								<option value="Extra-Large">X-Large</option>
+							</select>
+						</div>
+						<br/>
+						<div>
+							<input type="number" id="value7" value="0" min="0" max="10" class="number"/>
+							<button type="button" name="purchase" id="btn" onclick="addItem('name7','price7','value7','womenscol','womenss')">
+								Add to cart
+							</button>
+						</div>
+					</div>
+					<br/>
+				</div>
+			</div>
+			<div class="product">
+				<div id="product8">
+					<img  src="images/Dwhite1.png" id="mugImg" alt="drinking mug">
+					<button class="swipe frnt" name="front" onclick="changeMug()">Front</button>
+					<button class="swipe" name="back" onclick="displayMugBack()">Back</button>
+					<div id="descript">
+						<br/>
+						<div id="name8">
+							Green World printed mug
+						</div>
+						<div>
+							<div id="currency">
+								Rs.
+							</div>
+							<div id="price8" class="price">
+								500.00
+							</div>
+						</div>
+						<br/>
+						<div class="mugcol selectcol">
+							<select name="mugcolor" class="mugs" id="mugC" onchange="changeMug()">
+								<option value="color" selected>Color</option>
+								<option value="white" >White</option>
+								<option value="teal">Teal</option>
+								<option value="green">Green</option>
+								<option value="brown">Brown</option>
+								<option value="skyblue">Sky Blue</option>
+								<option value="grey">Grey</option>
+								<option value="blue">Blue</option>
+							</select>
+						</div>
+						<br/>
+						<div>
+							<input  type="number" id="value8" value="0" min="0" max="10" class="number"/>
+							<button type="button" name="purchase" id="btn" onclick="addOrderMug('name8','price8','value8','mugC')">
+								Add to cart
+							</button>
+						</div>
+					</div>
+					<br/>
+				</div>
+			</div>
+		</div>
+		<div class="order" >
+			<div id="total">Your Total Order: </div>
+			<button type="button" name="proceed" id="checkout" onclick="redirect()" >Proceed to checkout</button>
+		</div>
+	</div>
+	<section >
+		<div class="editor-CV">
+			<a class="editPerson" href="sumuduCV.html">Edited By: A.S.M.Fernando</a>
+		</div>
+	</section>
+	<footer>
+		<div class="para4">
+		  <p>
+			  Last Modified Date:23rd of July 2019<br/>
+			  Copyright &copy; 2019 by Group 5.All rights reserved
+		  </p>
+		</div>  
+	</footer>
+	<script src="js/productScript.js"></script>	
+</body>
+</html>
