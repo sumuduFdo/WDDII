@@ -1,0 +1,290 @@
+/*style the main div element*/
+#main{margin:1%;
+	margin-bottom:0; 
+	min-width:800px; 
+	overflow:hidden;
+	font-family:gadugi;
+	font-size:15px; }
+
+/*style stiky element for font size change and page up and down buttons*/
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/*style the wrap element including all the products*/
+#wrap{margin:2% 10% 2% 12%; 
+	float:center; /*keep the wrap area centralized by floating center*/
+	width:auto; 
+	min-width:800px;}
+
+.product{float:left;  /*align products in the wrap element*/
+	width:31%; 
+	border:1px solid white; 
+	margin:10px;}
+
+img{float:center; 
+	width:350;  /*maintain fixed image width and height for product images*/
+	height:350;}
+		
+#descript{text-align:center; 
+	font-size:1em;  /*set font-size relative to the main element*/
+	font-weight:bold; 
+	display:grid;
+	color:black;}
+
+/*style add to card button*/
+#btn{width:32%; 
+	padding:2.5% 1% 2.5% 1%;
+	display:inline-block;
+	margin-left:10px;
+	border:none; 
+	background-color:#115930; 
+	font-weight:500; 
+	color:white;  /*set font color white for darker backgorund colors*/
+	border-radius:8px;}
+
+/*total order title*/
+#total{float:left; 
+	height:100%; 
+	font-size:1.5em; 
+	padding:2%; 
+	margin-left:2%;}
+
+/*total order value displayed at the bottom*/
+.order{width:100%; 
+	overflow:hidden; 
+	background-color:#D9D9D9; 
+	float:center;
+	margin:2% 0 0 0;}
+		
+
+input{margin-left:10px; 
+	}
+
+.tabItems{width:60%; 
+	float:left ;}
+
+/*checkout button */
+#checkout{font-size:1.3em; 
+	float:right; 
+	padding:0.8%; 
+	border:none; 
+	border-radius:10px; 
+	margin:1.5%; 
+	margin-right:5%; 
+	background-color:#115930; 
+	color:white; 
+	font-weight:300;}
+		
+#currency{float:left; 
+	margin-left:35%; 
+	margin-right:none;}
+
+.price{float:left;}
+
+.frnt{margin-left:35%;}
+
+.options{float:center; 
+	width:auto; 
+	overflow:hidden; }
+		
+.selectcol{width:32%; padding:1.5%;} 
+
+.sizes{width:28%; padding:2%;}
+
+.mugcol{margin-left:35%;}
+
+.mugs{width:100%; padding:2.5%;}
+
+select{font-size:0.9em; 
+	color:#373342;}
+
+.swipe{font-size:1em; 
+	color:white; 
+	border:none; 
+	background-color:#373342; 
+	border-radius:4px;
+	padding:1%;}
+
+.number{width:15%; 
+	text-align:center;}
+ 
+.msg{width:auto;}
+		
+#content1{ 
+	font-size:1.4em; 
+	margin:0 4% 0 1.2%; 
+	color:#595959; 
+	text-align:center;}
+
+/*form element div displayed at checkout*/	
+#forminfo{display:none; 
+	position:absolute; 
+	overflow:hidden; 
+	color:white;
+	margin:6% 20% 10% 25%; 
+	float:center; 
+	font-size:1.2em;
+	border:1px solid black; 
+	border-radius:8px; 
+	padding: 0 1.5% 4% 4%; 
+	min-width:600px;
+	background-image:url("images/back.jpg");
+	background-position:center;}
+
+/*form submit button*/
+.formbtn{background-color:#36733F; 
+	border:none; 
+	color:white;  
+	font-size:0.83em; 
+	padding:1%; 
+	float:right; 
+	border-radius:5px; 
+	margin-left:1%; 
+	width:25%; 
+	vertical-align:center; 
+	height:45px; }
+		
+/*checkout form*/
+#form1{vertical-align:center; 
+	margin-left:6%; 
+	margin-right:25%;}
+
+.element{height:20px; 
+	width:280px; 
+	font-size:0.9em; 
+	margin-left:60px;}
+
+p{align:center; 
+	font-size:1.8em; 
+	margin:12% 0 0 10%;}
+		
+/*order details displayed at form submit*/
+#orderinfo{display:none; 
+	font-size:22px; 
+	position:absolute; 
+	overflow:hidden; 
+	margin:10% 20% 10% 18%; 
+	float:center; 
+	border:2px solid black; 
+	border-radius:8px; 
+	padding:2%; 
+	padding-top:0; 
+	background-color:rgba(255,255,255,1); 
+	min-width:650px; 
+	width:50%; 
+	color:#525453; 
+	border-color:#BFBFBF;}
+
+/*message display div element*/
+#mesDisplay{display:none; 
+	position:fixed; 
+	overflow:hidden; 
+	margin:2% 20% 10% 28%; 
+	float:center;  
+	border-radius:8px; 
+	padding:1%; 
+	font-family:gadugi; 
+	font-size:1.3em; 
+	color:white; 
+	background-color:rgba(35,114,217,1); 
+	min-width:500px;}
+
+#outer{display:grid; 
+	font-family:gadugi;  
+	padding:4%;}
+
+#billinfo{width:auto; 
+	overflow:hidden; 
+	display:grid; 
+	grid-template-rows:auto;
+	margin-top:4%;}
+      	
+.itemSum{float:center; 
+	width:100%; 
+	display:inline-flex;}
+
+#itemN{float:left; 
+	width:60%; 
+	padding:2%; 
+	padding-left:4%;}
+
+#itemQ, #itemP{ float:left; 
+	width:10%; 
+	padding:2%; 
+	text-align:center;}
+
+#itemP{text-align:right; 
+	width:14%;}
+
+li{list-style:none; 
+	margin-top:0;}
+
+#title{width:70%; 
+	padding:1%; 
+	padding-left:4%; }
+
+#sum{float:right; 
+	width:26%; 
+	padding:1%;
+	text-align:right; 
+	padding-right:3.5%;}	
+
+.top{margin-left:4%; 
+	font-size:1.25em; 
+	margin-top:6%;}
+
+#close{float:right; 
+	width:auto; 
+	margin-right:-2%; 
+	padding:1%; 
+	font-size:1.5em;}
+
+.closeItem{background-color:white; 
+	font-size:1.4em; border:none;}
+
+.closeItem:hover{cursor:pointer;} /*change the cursor when pointed on the closeitem button*/
+
+#studentD{float:center;  
+	font-size:1.2em; 
+	background-color:blue; 
+	margin-bottom:0px;}
+
+#fontC{ float:right; 
+	width:100%;  
+	text-align:right; 
+	display:block;}
+
+.pageN{float:left;  /*float the page navigation buttons to the left*/
+		width:50%;
+		text-align:left;
+		display:block;}
+
+.fontS{background-color:black; 
+	border:1px solid white; 
+	border-radius:4px; 
+	font-size:20px; 
+	color:white; 
+	width:50px; 
+	font-weight:bold; 
+	padding:0.3%; 
+	margin:0;}
+
+/*set page navigation button background colors dark and font colors white*/
+.pgnav{background-color:black; 
+	border:1px solid white; 
+	border-radius:4px; /*apply rounded corners to buttons*/
+	font-size:18px; 
+	color:white; 	
+	width:120px; 
+	font-weight:bold; /*set the font weight bold */
+	padding:0.3%; 
+	margin:0;}
+
+.closeF{background-color:transparent;
+	outline:none; 
+	color:white; 
+	float:right; 
+	margin-right:2%;}
