@@ -1,0 +1,28 @@
+body{margin:0%; padding:0%;}
+.container{font-size:25px; 
+	width:100%; 
+	margin-top:150px; 
+	min-width:750px;
+position:absolute;}
+#inner{float:left; 
+	font-size:1em+1vw; 
+	text-align:center;}
+.uow{margin:0 2% 0 6%; 
+	width:34%;}
+.iit{margin:0 0 0 0;}
+.name{margin:0 0 0 2%; 
+	float:center;}
+.mTitle{ text-align:center;
+	position:center;}
+h1{font-size:1.6em; 
+	font-weight:400; }
+.iitLogo{float:left; 
+	margin:5% 0 0 6%;}
+.uowLogo{float:right;
+ margin:5% 6% 0 0;}
+.content{width:100%; 
+	align:center; 
+	}
+#uowD{float:right;}
+.logo{min-width:800px; 
+	position:fixed; width:100%}
